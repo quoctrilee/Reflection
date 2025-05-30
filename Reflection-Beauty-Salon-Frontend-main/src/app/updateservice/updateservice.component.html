@@ -1,0 +1,42 @@
+<div class="divbody">
+  <div class="container">
+    <h2 class="text-center">Update Service</h2>
+    <form (ngSubmit)="submitdata()">
+      
+      <!-- Category -->
+      <div class="mb-3">
+        <label class="form-label">Select Category</label>
+        <select class="form-select" name="category" required [(ngModel)]="ups.category" (change)="onCategoryChange()">
+          <option value="" selected>Choose a category...</option>
+          <option *ngFor="let cat of categories" [value]="cat.name">{{ cat.name }}</option>
+        </select>
+      </div>
+
+      <!-- Subcategory -->
+      <div class="mb-3" *ngIf="subcategories.length > 0">
+        <label class="form-label">Select Subcategory</label>
+        <select class="form-select" name="subcategory" required [(ngModel)]="ups.subcategory">
+          <option value="" selected>Choose a subcategory...</option>
+          <option *ngFor="let subcat of subcategories" [value]="subcat">{{ subcat }}</option>
+        </select>
+      </div>
+
+      <!-- Service Name -->
+      <div class="mb-3">
+        <label for="serviceName" class="form-label">Service Name</label>
+        <input type="text" class="form-control" id="serviceName" placeholder="Enter service name" name="serviceName" [(ngModel)]="ups.serviceName" required>
+      </div>
+
+      <!-- Service Cost -->
+      <div class="mb-3">
+        <label for="serviceCost" class="form-label">Service Cost (₹)</label>
+        <input type="number" class="form-control" id="serviceCost" placeholder="Enter Cost" name="serviceCost" [(ngModel)]="ups.serviceCost" required>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-50">Update Service</button>
+      </div>
+    </form>
+  </div>
+</div>

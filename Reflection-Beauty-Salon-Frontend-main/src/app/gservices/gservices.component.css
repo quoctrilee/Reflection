@@ -1,0 +1,35 @@
+.card{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .container-fluid .btn{
+    margin-bottom: 12px;
+  }
+  .container-fluid .row .col-sm-3 .card{
+    height: 600px;
+  }
+  .container-fluid .row .col-sm-3 .card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    height: 100%; 
+    padding:0;
+
+  }
+  .container-fluid .row .col-sm-3 .card .card-img-top{
+    width: 310px;
+    height: 400px;
+    padding: 10px 10px 10px 10px; 
+    border-radius: 5%;
+  }
+  .divbody{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .divbody h1{
+    text-align: center; 
+    display: block; 
+    padding-bottom: 20px;
+    font-weight: bold;
+
+  }

@@ -1,0 +1,16 @@
+<div class="diva">
+    <div class="container">
+        <h1 class="text-center">Valuable Feedbacks</h1>
+        <div class="row">
+            <div *ngFor="let f of farr" class="col-sm-6 offset-sm-3" >
+                <div class="caption">
+                    <strong>Name:</strong> {{ f.name }}<br>
+                    <strong>Email:</strong> {{ f.email }}<br>
+                    <strong>Rating:</strong> {{ f.rating }}<br>
+                    <strong>Comments:</strong> {{ f.comments }}
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

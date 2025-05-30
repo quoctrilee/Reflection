@@ -1,0 +1,23 @@
+.divbody{
+    background-color: #eff6f9;
+    font-family: 'Times New Roman', Times, serif;
+}
+.mt-3 {
+    height: 100vh;
+    background: powderblue;
+    color: rgb(233, 230, 246);
+    padding: 15px;
+}
+.mt-4{
+    background: #000;
+    height: 100%;
+}
+.sidebar a {
+    color:rgb(240, 207, 212);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.sidebar a:hover {
+    background: rgb(240, 207, 212);
+}

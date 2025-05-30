@@ -1,0 +1,25 @@
+<div class="divbody">
+<!-- Hero / Main Section -->
+<div class="container" style="padding-top: 10px;">
+    <div class="login-container" style="background-image: url('bg.jpg');">
+        <h2>Login Here</h2>
+        <form (ngSubmit)="submitdata()">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email </label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" [(ngModel)]="r.email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password" [(ngModel)]="r.password" required>
+            </div>
+            <button type="submit" class="btn btn-login w-100">Login</button>
+            <div class="text-center mt-3">
+                <a href="#" class="text-decoration-none">Forgot Password?</a>
+            </div><br>
+            <div class="login-link">
+                <div style="text-align:center;">Don't have an account? <br><a routerLink="/register">Signup</a></div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

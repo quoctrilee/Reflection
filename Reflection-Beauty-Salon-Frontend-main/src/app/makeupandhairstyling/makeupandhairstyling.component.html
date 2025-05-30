@@ -1,0 +1,37 @@
+<div class="divbody">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Makeup and Hairstyling</h2>
+      <p class="lead">
+        "Unleash your complete look with our expert makeup and perfectly paired hairstyling,<br>
+        designed to complement your unique features and style."
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="position-relative mb-4">
+          <img src="makeup.jpg" class="img-fluid" alt="makeup image">
+          <a routerLink="/bookappointment" class="btn btn-success book-appointment-btn">
+            <i class="fas fa-calendar-alt me-2"></i>Book Appointment
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="services-list">
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let service of services" class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="service-name">{{ service.serviceName }}</span>
+                <span class="badge" style="margin-left: 600px;">{{ service.serviceCost }} vnd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

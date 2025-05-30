@@ -1,0 +1,22 @@
+<div class="divbody">
+<!-- Hero / Main Section -->
+<div class="container" style="padding-top: 30px;">
+    <h1 class="text-center mt-4" style="font-weight: bold; display: inline; ">Courses</h1>
+    <a routerLink="/courseregisteration" class="btn btn-warning btn-lg me-2" style="margin-left: 700px ;">..Register for Course</a>
+    <div class="row course-container" *ngIf="courses.length > 0">
+      <div class="col-md-4" *ngFor="let course of courses">
+        <div class="course-box">
+          <img *ngIf="course.courseImages?.length"
+          [src]="'http://localhost:9000/project/downloadFile/' + course.courseImages[0].name"
+               class="card-img-top"
+               alt="{{ course.coursename }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ course.coursename }}</h4>
+            <h5 class="card-text">Duration: {{ course.duration }} months</h5>
+            <p class="card-text">Fees: {{ course.fees }} vnd</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,35 @@
+<!-- Main Content -->
+<div class="diva">
+    <div class="container">
+        <main class="py-4">
+            <h2 class="mb-4">Appointment History</h2>
+            
+            <!-- Registrations Table -->
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone No</th>
+                            <th>Course</th>
+                            <th>Batch</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr *ngFor="let cr of crarr">
+                            <td>{{cr.id}}</td>
+                            <td>{{cr.name}}</td>
+                            <td>{{cr.email}}</td>
+                            <td>{{cr.phone}}</td>
+                            <td>{{cr.course}}</td>
+                            <td>{{cr.batch}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    </div>

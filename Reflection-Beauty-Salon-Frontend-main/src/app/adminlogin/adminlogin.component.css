@@ -1,0 +1,32 @@
+.divbody{
+    background-color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .login-container {
+    max-width: 500px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  .login-container h2 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0%;
+    border-top: 0;
+    color: #0f0d0e;
+    font-weight: bold;
+  }
+  .form-label{
+    font-weight: bold;
+  }
+  .btn-login {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    font-weight: bold;
+  }
+  .btn-login:hover {
+    background-color: #bb296f;
+  }

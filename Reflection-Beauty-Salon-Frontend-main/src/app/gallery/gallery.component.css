@@ -1,0 +1,18 @@
+.col-md-4mb-4{
+    height: 200px;
+    width: 200px;
+}
+.gallery-img img {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images fit well without distortion */
+}
+.divbody{
+    font-family: 'Times New Roman', Times, serif;
+}
+.text-center{
+    font-weight: bold; 
+    padding-bottom: 20px; 
+    padding-top: 0px;
+    border-top: 0%;
+}

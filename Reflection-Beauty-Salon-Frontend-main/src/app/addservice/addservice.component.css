@@ -1,0 +1,39 @@
+.divbody {
+    background-color: beige;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container h2 {
+    text-align: center;
+    color: #0f0d0e;
+    font-weight: bold;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    background-color: #d63384;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #c2186a;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  

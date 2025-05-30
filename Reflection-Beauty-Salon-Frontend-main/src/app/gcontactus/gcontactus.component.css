@@ -1,0 +1,33 @@
+.contact-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info .icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    height: 300px;
+    width: 500px;
+}
+.divbody{
+    font-family: 'Times New Roman', Times, serif;
+}

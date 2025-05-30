@@ -1,0 +1,43 @@
+<div class="divbody">
+    <div class="container mt-0" style="padding-top: 20px; padding-bottom: 20px;">
+  
+      <!-- Heading and Add Course button in same row -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="m-0" style="font-weight: bold;">Course Management</h2>
+        <a class="btn btn-success" routerLink="/addcourse">Add Course</a>
+      </div>
+  
+      <!-- Search bar -->
+      <div class="mb-3">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm" (input)="filterServices()">
+      </div>
+  
+      <!-- Table -->
+      <div class="bg-body-tertiary" style="padding-bottom: 10px;">
+        <table class="table table-bordered table-hover table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>Course Name</th>
+              <th>Duration (in months)</th>
+              <th>Fees (vnd)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cr of filteredServices">
+              <td>{{ cr.id }}</td>
+              <td>{{ cr.coursename }}</td>
+              <td>{{ cr.duration }}</td>
+              <td>{{ cr.fees }}</td>
+              <td>
+                <a (click)="delcourse(cr.id)" class="btn btn-danger">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  </div>
+  

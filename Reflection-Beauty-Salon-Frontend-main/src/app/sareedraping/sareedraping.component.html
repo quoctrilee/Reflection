@@ -1,0 +1,37 @@
+<div class="divbody">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Clothing rental</h2>
+      <p class="lead">
+        "Elegance Draped to Perfection" and "Royal Drapes for Unforgettable Moments"<br>
+        Expert saree draping for every occasion and professional services including pre-pleating, ironing, and box folding.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="position-relative mb-4">
+          <img src="aodaibg.png" class="img-fluid" alt="Saree draping image">
+          <a routerLink="/bookappointment" class="btn btn-success book-appointment-btn">
+            <i class="fas fa-calendar-alt me-2"></i>Book Appointment
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="services-container">
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let service of services" class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center w-100">
+                <span class="service-name">{{ service.serviceName }}</span>
+                <span class="badge">{{ service.serviceCost }} vnd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="divbody">
+<!-- Hero / Main Section -->
+<div class="container">
+    <div class="appointment-container" style="background-image: url('bg.jpg'); ">
+        <h2 class="text-center">Book an Appointment</h2>
+        <p class="text-center text-info">Schedule your beauty session with us!</p>
+
+        <form method="POST" #regForm="ngForm" (ngSubmit)="submitdata(regForm)">
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter your name" #name="ngModel" ngModel required>
+                <div *ngIf="!name.valid" style="color:red;">
+                    <div *ngIf="name.errors?.['required']">
+                        Enter Full Name
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" #email="ngModel" ngModel required>
+                <div *ngIf="!email.valid" style="color:red;">
+                    <div *ngIf="email.errors?.['required']">
+                        Enter Email Address
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your mobile number" name="phn" #phn="ngModel" ngModel required pattern="[0][0-9]{9}">
+                <div *ngIf="!phn.valid" style="color:red;">
+                    <div *ngIf="phn.errors?.['required']">
+                        Enter Mobile Number
+                    </div>
+                    <div *ngIf="phn.errors?.['pattern']">
+                        Enter Valid Mobile Number
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Preferred Date</label>
+                <input type="date" class="form-control" name="date" #date="ngModel" ngModel required>
+                <div *ngIf="!date.valid" style="color:red;">
+                    <div *ngIf="date.errors?.['required']">
+                        Please enter a date for appointmet
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Select Service</label>
+                <select class="form-select" name="service" #service="ngModel" ngModel required>                                   
+                    <option value="">Choose a service...</option>
+                    <ng-container *ngFor="let category of servicesByCategory | keyvalue">
+                        <option [value]="category.key" style="font-weight: bold; color: black;" disabled>{{category.key}}</option>
+                        <option *ngFor="let service of category.value" [value]="service.serviceName">
+                            {{service.serviceName}} - {{service.serviceCost}}
+                        </option>
+                    </ng-container>
+                </select>
+                <div *ngIf="!service.valid" style="color:red;">
+                    <div *ngIf="service.errors?.['required']">
+                        Select a Service
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="!regForm.valid" class="btn btn-book w-100">Book Appointment</button>
+        </form>
+    </div>
+</div>
+</div>

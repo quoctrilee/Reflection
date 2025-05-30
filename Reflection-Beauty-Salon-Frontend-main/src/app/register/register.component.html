@@ -1,0 +1,92 @@
+<div class="divbody">
+<div class="signup-container" style="margin-top: 20px; margin-bottom: 20px;" >
+    <div class="signup-card" style="background-image: url('bg.jpg');">
+        <h2>Sign Up</h2>
+        <form #regForm="ngForm" (ngSubmit)="submitdata(regForm)">
+            
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" name="name" #name="ngModel" ngModel required pattern="^[a-zA-Z\s]+$">
+                <div *ngIf="!name.valid" style="color:red;">
+                    <div *ngIf="name.errors?.['required']">
+                        Enter Full Name
+                    </div>
+                    <div *ngIf="name.errors?.['pattern']">
+                        No Special Symbols and Digits Allowed
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" #dob="ngModel" ngModel required>
+                <div *ngIf="!dob.valid" style="color:red;">
+                    <div *ngIf="dob.errors?.['required']">
+                        Enter Date of Birth
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" #email="ngModel" ngModel required>
+                <div *ngIf="!email.valid" style="color:red;">
+                    <div *ngIf="email.errors?.['required']">
+                        Enter Email Address
+                    </div>
+                    <div *ngIf="email.errors?.['email']" style="color:red;">
+                        Enter Valid Email Address
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="phone" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your prasad mobile number" name="phn" #phn="ngModel" ngModel required pattern="[0][0-9]{9}">
+                <div *ngIf="!phn.valid" style="color:red;">
+                    <div *ngIf="phn.errors?.['required']">
+                        Enter prasad Mobile Number
+                    </div>
+                    <div *ngIf="phn.errors?.['pattern']">
+                        Enter Valid Mobile Number
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" placeholder="Enter your address" name="address" #address="ngModel" ngModel required></textarea>
+                <div *ngIf="!address.valid" style="color:red;">
+                    <div *ngIf="address.errors?.['required']">
+                        Enter Your Address
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="password" class="form-label">Create Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Create your password" name="password" #password="ngModel" ngModel required pattern="^[A-Za-z0-9@!#$%^&*]{8,12}$">
+                <div *ngIf="!password.valid" style="color:red;">
+                    <div *ngIf="password.errors?.['required']">
+                        Enter Password
+                    </div>
+                    <div *ngIf="password.errors?.['pattern']">
+                        Password must have atleast 1 Capital Letter, 1 Small Letter, 1 Digit, 1 Special Symbol and minimum 8/ maximum 12 characters
+                    </div>
+                </div>
+            </div>
+
+            
+            <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary">Sign Up</button>
+
+            
+            <div class="login-link">
+                <div>Already have an account? <a routerLink="/login">Login here</a></div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

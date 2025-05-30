@@ -1,0 +1,12 @@
+.mainsection{
+    padding-top: 0px;
+  }
+  .divbody{
+    font-family: 'Times New Roman', Times, serif;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }

@@ -1,0 +1,46 @@
+<div class="divbody">
+    <div class="container mt-0" style="padding-top: 20px; padding-bottom: 20px;">
+  
+      <!-- Heading and Add Service button in one row -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="m-0" style="font-weight: bold;">Service Management</h2>
+        <a class="btn btn-success" routerLink="/addservice">Add Service</a>
+      </div>
+  
+      <!-- Search bar -->
+      <div class="mb-3">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm" (input)="filterServices()">
+      </div>
+  
+      <!-- Table -->
+      <div class="bg-body-tertiary" style="padding-bottom: 10px;">
+        <table class="table table-bordered table-hover table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Sub-Category</th>
+              <th>Service</th>
+              <th>Cost (vnd)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let sr of filteredServices">
+              <td>{{ sr.id }}</td>
+              <td>{{ sr.category }}</td>
+              <td>{{ sr.subcategory }}</td>
+              <td>{{ sr.serviceName }}</td>
+              <td>{{ sr.serviceCost }}</td>
+              <td>
+                <a (click)="upService(sr.id)" class="btn btn-warning" routerLink="/updateservice">Update</a>&nbsp;&nbsp;
+                <a (click)="delService(sr.id)" class="btn btn-danger">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  </div>
+  

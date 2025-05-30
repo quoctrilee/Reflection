@@ -1,0 +1,91 @@
+/* General Styling */
+.body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+     background-repeat: no-repeat;
+  }
+  
+   /* Hero Section */
+   .hero {
+    text-align: center;
+    padding: 80px 20px;
+    color: #000000;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 22px;
+    color: #000000;
+    margin: 15px 0;
+  }
+  
+  /* Buttons */
+.btn-custom {
+  font-size: 22px; /* Slightly larger text */
+  padding: 12px 35px; /* More padding for a bigger button */
+  margin: 12px;
+  border: 2px solid #d7828f; /* Border color matching the theme */
+  color: white; /* White text for better contrast */
+  font-weight: bold;
+  background: #d7828f; /* Solid background instead of transparent */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for better visibility */
+}
+
+.btn-custom:hover {
+  background: #91444f; /* Darker shade on hover */
+  color: white; /* Keep text visible */
+  transform: scale(1.05); /* Slight enlargement effect */
+}
+  
+  /* Why Choose Us - Cards */
+  .why-choose {
+    text-align: center;
+    padding: 50px 20px;
+    color: #000000;
+  
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    height: 100%; /* Đảm bảo tất cả card có chiều cao bằng nhau */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body {
+    flex: 1; /* Cho phép card-body mở rộng để lấp đầy không gian còn lại */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .card-title {
+    color: #91444f;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .card-text {
+    margin-bottom: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

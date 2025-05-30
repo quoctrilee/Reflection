@@ -1,0 +1,26 @@
+.mainsection{
+    padding-top: 0px;
+  }
+  .img-thumbnail {
+    height: 400px;
+    width: 500px; 
+    display: block;
+    margin: 50px auto;
+    border-radius: 10px; 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }    
+  .img-thumbnail:hover{
+    transform: scale(1.1);
+  }
+  .btn{
+    margin-left: 200px;
+    color: rgb(133, 33, 226);
+    border: 2px solid black; 
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 9px rgba(0,0,0,0.3);
+  }
+  .divbody{
+    font-family: 'Times New Roman', Times, serif;
+  }

@@ -1,0 +1,101 @@
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav" >
+    <div class="container-fluid" [ngSwitch]="usertype">
+      <!-- Brand Name -->
+      <a class="navbar-brand">
+        <img src="logo.jpg" class="rounded-pill" alt="Reflection" style="width:90px; height:60px; "  >
+      </a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Social/Extra Links -->
+      <!-- Nav tabs -->
+      <ul class="navbar-nav ms-auto" *ngSwitchCase="'guest'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gaboutus">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/ggallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gservices">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/gcourses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/gcontactus">Contact us</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/adminlogin">Admin Login</a> 
+          </li>
+
+      </ul>
+
+      <ul class="navbar-nav ms-auto" *ngSwitchCase="'user'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/services">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/feedback">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="ulogout()" >Logout</a>
+          </li>  
+      </ul>
+
+      <ul class="navbar-nav ms-auto" *ngSwitchCase="'admin'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminhome">Home</a>
+        </li>
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">Client Data History</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/registeredusers">Registered Users</a></li>
+            <li><a class="dropdown-item" routerLink="/appointmenthistory">Appointment History</a></li>
+            <li><a class="dropdown-item" routerLink="/courseregisterationhistory">Course Registration History</a></li>
+
+          </ul>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/servicemgt">Service Mgt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/coursemgt">Course Mgt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addservice">Add Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addcourse">Add Course</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/viewfeedback">View feedback</a>
+        </li>          
+        <li class="nav-item">
+          <a class="nav-link" (click)="alogout()" >Logout</a>
+        </li>  
+      </ul>
+      </div>
+    </div>
+  </nav>

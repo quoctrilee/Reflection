@@ -1,0 +1,33 @@
+.star-container {
+    display: inline-flex;
+    direction: rtl;
+}
+
+.star-container input[type="radio"] {
+    display: none;
+}
+
+.star-container label {
+    cursor: pointer;
+    color: #ccc;
+    font-size: 1.5rem;
+}
+
+.star-container input[type="radio"]:checked~label,
+.star-container input[type="radio"]:checked+label~label {
+    color: #ffc107;
+}
+
+.btn-danger:hover {
+    background-color: green !important;
+    border-color: green !important;
+}
+
+/* Center the submit button */
+.submit-container {
+    display: flex;
+    justify-content: center;
+}
+.divbody{
+    font-family: 'Times New Roman', Times, serif;
+}

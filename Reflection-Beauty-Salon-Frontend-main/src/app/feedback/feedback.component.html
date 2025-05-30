@@ -1,0 +1,65 @@
+<div class="divbody"  >
+<div class="container my-5" >
+    <h3 class="mb-4 fw-bold">Reviews & Ratings</h3>
+    <div class="row" >
+        <div class="col-md-8" style="align-items: center;">
+            <div class="card shadow-sm p-4">
+                <h5>Rate Us</h5>
+                <form #regForm="ngForm" (ngSubmit)="submitdata(regForm)">
+               
+                    <div>
+                        <input type="radio" id="star5" name="rating" value="5" [(ngModel)]="fb.rating" ngModel >
+                        <label for="star5" class="fas fa-star"></label>
+                        
+                        <input type="radio" id="star4" name="rating" value="4" [(ngModel)]="fb.rating" ngModel>
+                        <label for="star4" class="fas fa-star"></label>
+
+                        <input type="radio" id="star3" name="rating" value="3" [(ngModel)]="fb.rating" ngModel>
+                        <label for="star3" class="fas fa-star"></label>
+
+                        <input type="radio" id="star2" name="rating" value="2" [(ngModel)]="fb.rating" ngModel>
+                        <label for="star2" class="fas fa-star"></label>
+
+                        <input type="radio" id="star1" name="rating" value="1" [(ngModel)]="fb.rating" ngModel>
+                        <label for="star1" class="fas fa-star"></label>
+                        
+                    </div>
+                
+                    <div class="form-row mb-3">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Enter your name" #name="ngModel" ngModel required>
+                            <div *ngIf="!name.valid" style="color:red;">
+                                <div *ngIf="name.errors?.['required']">
+                                    Enter Full Name
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" #email="ngModel" ngModel required>
+                            <div *ngIf="!email.valid" style="color:red;">
+                                <div *ngIf="email.errors?.['required']">
+                                    Enter Email Address
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <textarea class="form-control" placeholder="Tell us about your experience" name="comments" #comments="ngModel" ngModel required></textarea>
+                        <div *ngIf="!comments.valid" style="color:red;">
+                            <div *ngIf="comments.errors?.['required']">
+                                Please leave us a feedback
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-container">
+                        <button type="submit" [disabled]="!regForm.valid" class="btn btn-danger btn-block">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
